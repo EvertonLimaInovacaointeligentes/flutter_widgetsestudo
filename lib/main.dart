@@ -27,6 +27,7 @@ import 'lista/lista.dart';
 import 'listaBuilder/listaViewBuild.dart';
 import 'listaSeparated/listaViewSeparated.dart';
 import 'media_query/media.query.dart';
+import 'modal_bottom_sheet/modal_sheet_bottom.dart';
 
 void main() {
   runApp(
@@ -86,6 +87,7 @@ class MyApp extends StatelessWidget {
         '/splash': (_) => SplashPage(),
         '/cloneInstagram': (_) => CloneInstagramPage(),
         '/imcState': (_) => imc_page(),
+        '/bootsheet':(_)=> ModalShettButtom(),
       },
     );
   }

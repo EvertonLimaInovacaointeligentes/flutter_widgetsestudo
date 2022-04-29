@@ -67,6 +67,7 @@ flutter:
     - lib/animations/dog.json
     - lib/assets/cidade.json
     - lib/assets/instagram.json
+    - lib/assets/oferta.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

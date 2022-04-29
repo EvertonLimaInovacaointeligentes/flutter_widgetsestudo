@@ -26,6 +26,7 @@ enum PopupMenupages {
   cloneInstagram,
   splash,
   imcState,
+  bootsheet,
 }
 
 class HomePage extends StatelessWidget {
@@ -115,6 +116,9 @@ class HomePage extends StatelessWidget {
                     break;
                   case PopupMenupages.imcState:
                     Navigator.of(context).pushNamed("/imcState");
+                    break;
+                  case PopupMenupages.bootsheet:
+                    Navigator.of(context).pushNamed('/bootsheet');
                     break;
                 }
               },
@@ -211,6 +215,10 @@ class HomePage extends StatelessWidget {
                   PopupMenuItem<PopupMenupages>(
                     value: PopupMenupages.imcState,
                     child: Text('Imc State'),
+                  ),
+                  PopupMenuItem<PopupMenupages>(
+                    value: PopupMenupages.bootsheet,
+                    child: Text('bootsheet'),
                   ),
                   /*PopupMenuItem<PopupMenupages>(
                     value: PopupMenupages.splash,
