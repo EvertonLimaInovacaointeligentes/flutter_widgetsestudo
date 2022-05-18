@@ -25,12 +25,17 @@ class ModalShettButtom extends StatelessWidget {
                   //{Color? backgroundColor}
                   backgroundColor: Colors.white,
                   shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(15),
-                  )),
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(15),
+                    ),
+                  ),
                   context: context,
                   builder: (context) => buildSheet(context),
                 ),
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('teste'),
               ),
             ],
           ),
@@ -45,37 +50,42 @@ Widget buildSheet(BuildContext context) {
   /*initialChildSize: 0.9,
     minChildSize: 0,
     maxChildSize: 0.9,*/
-  /*builder: (_, controller) =>*/ return  Container(
-      //color: Colors.red,
+  /*builder: (_, controller) =>*/ return Container(
+    //color: Colors.red,
     //height: 150.0,
 
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      //é o padding dentro do container que controle os espaços
-      // padding: const EdgeInsets.only(left: 8.0,top: 0.0,right: 8.0),
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.only(left: 8.0, top: 0.0, right: 8.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Align(
-              alignment: Alignment.centerRight,
-              child: IconButton(
-                onPressed: () => Fechar(context),
-                icon: Icon(Icons.clear),
-              ),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+    ),
+    //é o padding dentro do container que controle os espaços
+    // padding: const EdgeInsets.only(left: 8.0,top: 0.0,right: 8.0),
+    child: SingleChildScrollView(
+      padding: const EdgeInsets.only(left: 8.0, top: 0.0, right: 8.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Align(
+            alignment: Alignment.centerRight,
+            child: IconButton(
+              onPressed: () => Fechar(context),
+              icon: const Icon(Icons.clear),
             ),
-            Image.asset('lib/assets/oferta.png',height: 200,),
-            SizedBox(height: 20,),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('Continue'),
-            ),
-          ],
-        ),
+          ),
+          Image.asset(
+            'lib/assets/oferta.png',
+            height: 200,
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Continue'),
+          ),
+        ],
       ),
-    );
+    ),
+  );
 
   // );
 }
@@ -91,25 +101,6 @@ Widget buildButton({
       style: TextStyle(fontSize: 20),
     ),
   );
-
-  /*return Column(
-    children: [
-      Align(
-        alignment: Alignment.centerRight,
-        child: IconButton(
-          onPressed: () => Fechar(context),
-          icon: Icon(Icons.clear),
-        ),
-      ),
-      ElevatedButton(
-        onPressed: onClicked,
-        child: Text(
-          text,
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    ],
-  );*/
 }
 
 void Fechar(BuildContext context) {
